@@ -1,4 +1,22 @@
-﻿/*
+﻿/**
+ * @file winmain.cpp
+ * このファイルは変更せずそのまま使ってください。
+ * プログラムで最初に実行される部分（エントリーポイント）がここにあります。
+ */
+/*
+   Copyright (c) 2022, YOSHIMURA Takanori, studio memoru
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
  */
 
 #include "../configure.hpp"
@@ -12,7 +30,7 @@
 HINSTANCE g_instance;
 
 //-- in "app/WindowProc.cpp"
-LRESULT CALLBACK WMB_WNDPROC(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);
+LRESULT CALLBACK WMB_WINDOWPROC(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);
 
 
 static BOOL MakeMainWindow(HINSTANCE inst, int nCmdShow)
@@ -22,7 +40,7 @@ static BOOL MakeMainWindow(HINSTANCE inst, int nCmdShow)
     wcex.cbSize = sizeof(WNDCLASSEX);
 
     wcex.style = CS_HREDRAW | CS_VREDRAW;
-    wcex.lpfnWndProc = WMB_WNDPROC;
+    wcex.lpfnWndProc = WMB_WINDOWPROC;
     wcex.cbClsExtra = 0;
     wcex.cbWndExtra = 0;
     wcex.hInstance = inst;
@@ -30,7 +48,7 @@ static BOOL MakeMainWindow(HINSTANCE inst, int nCmdShow)
     wcex.hCursor = LoadCursor(nullptr, IDC_ARROW);
     wcex.hbrBackground = (HBRUSH)(GetStockObject(WHITE_BRUSH));
     wcex.lpszMenuName = nullptr;
-    wcex.lpszClassName = WMB_WINDOW_CLASS_NAME;
+    wcex.lpszClassName = WMB_WINDOW_CLASSNAME;
     wcex.hIconSm = nullptr;
 
     if (!RegisterClassExW(&wcex)) {
@@ -38,7 +56,7 @@ static BOOL MakeMainWindow(HINSTANCE inst, int nCmdShow)
     }
 
     //-- Create Window
-    HWND hWnd = CreateWindowW(WMB_WINDOW_CLASS_NAME, WMB_TITLE, WS_OVERLAPPEDWINDOW,
+    HWND hWnd = CreateWindowW(WMB_WINDOW_CLASSNAME, WMB_TITLE, WS_OVERLAPPEDWINDOW,
         CW_USEDEFAULT, CW_USEDEFAULT, CW_USEDEFAULT, CW_USEDEFAULT,
         nullptr, nullptr, inst, nullptr);
 

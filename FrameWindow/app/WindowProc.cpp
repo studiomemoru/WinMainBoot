@@ -1,4 +1,7 @@
-﻿/*
+﻿/**
+ * アプリケーションの実装をこのファイルに記述していきます。
+ * 
+ * ウィンドウプロシージャの実装があります。
  */
 
 #include "../configure.hpp"
@@ -6,7 +9,7 @@
 
 extern HINSTANCE g_instance;
 
-LRESULT CALLBACK WMB_WNDPROC(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
+LRESULT CALLBACK WMB_WINDOWPROC(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
     switch (message)
     {
