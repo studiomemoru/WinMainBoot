@@ -19,10 +19,9 @@
    limitations under the License.
  */
 
-#include "../configure.hpp"
-
 #define WIN32_LEAN_AND_MEAN
-#include <windows.h>
+
+#include "../WinMainBoot.hpp"
 #include <commctrl.h>
 
 #pragma comment(lib, "comctl32.lib") 

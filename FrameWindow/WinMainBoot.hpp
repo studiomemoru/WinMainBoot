@@ -1,8 +1,7 @@
 ﻿#pragma once
 /**
- * @file configure.hpp
  * WinMainBoot
- * アプリケーションの設定を記述します。
+ * 共通ヘッダーファイル
  */
 /*
    Copyright (c) 2022, YOSHIMURA Takanori, studio memoru
@@ -20,15 +19,8 @@
    limitations under the License.
  */
 
-//! メインウィンドウのウィンドウクラス名
-#define WMB_WINDOW_CLASSNAME		L"WinMainBoot"
+#include <SDKDDKVer.h>
+#include <windows.h>
 
-//! メインウィンドウのウィンドウプロシージャー名
-#define WMB_WINDOWPROC				MyWindowProc
-
-//! メインウィンドウのタイトル文字列
-#define WMB_TITLE					L"Main Window"
-
-//! アクセラレータテーブルのリソース識別子
-//#define WMB_RES_ACCELERATORS		L"WinMainBoot"
-
+#include "resources/resource.h"
+#include "configure.hpp"

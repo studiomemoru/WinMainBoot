@@ -4,8 +4,7 @@
  * ウィンドウプロシージャの実装があります。
  */
 
-#include "../configure.hpp"
-#include <windows.h>
+#include "../WinMainBoot.hpp"
 
 extern HINSTANCE g_instance;
 
