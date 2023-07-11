@@ -22,5 +22,8 @@
 #include <SDKDDKVer.h>
 #include <windows.h>
 
-#include "resources/resource.h"
-#include "configure.hpp"
+#include "../app/configure.hpp"
+
+#if WMB_USE_RESOURCES
+# include "../resources/resource.h"
+#endif

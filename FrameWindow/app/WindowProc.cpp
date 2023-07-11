@@ -4,11 +4,11 @@
  * ウィンドウプロシージャの実装があります。
  */
 
-#include "../WinMainBoot.hpp"
+#include "../winmain/WinMainBoot.hpp"
 
 extern HINSTANCE g_instance;
 
-LRESULT CALLBACK WMB_WINDOWPROC(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
+LRESULT CALLBACK WMB_WindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
     switch (message)
     {

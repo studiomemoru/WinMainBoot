@@ -20,15 +20,18 @@
    limitations under the License.
  */
 
+//! リソース(rc)を利用するかどうか。利用する場合は 1 、利用しない場合は 0 にする。
+#define WMB_USE_RESOURCES           (0)
+
 //! メインウィンドウのウィンドウクラス名
 #define WMB_WINDOW_CLASSNAME		L"WinMainBoot"
-
-//! メインウィンドウのウィンドウプロシージャー名
-#define WMB_WINDOWPROC				MyWindowProc
 
 //! メインウィンドウのタイトル文字列
 #define WMB_TITLE					L"Main Window"
 
-//! アクセラレータテーブルのリソース識別子
-//#define WMB_RES_ACCELERATORS		L"WinMainBoot"
+#if WMB_USE_RESOURCES
 
+//! アクセラレータテーブルのリソース識別子
+#define WMB_RES_ACCELERATORS		L"WinMainBoot"
+
+#endif

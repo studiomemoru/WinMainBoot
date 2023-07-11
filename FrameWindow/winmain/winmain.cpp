@@ -21,7 +21,7 @@
 
 #define WIN32_LEAN_AND_MEAN
 
-#include "../WinMainBoot.hpp"
+#include "WinMainBoot.hpp"
 #include <commctrl.h>
 
 #pragma comment(lib, "comctl32.lib") 
@@ -29,7 +29,7 @@
 HINSTANCE g_instance;
 
 //-- in "app/WindowProc.cpp"
-LRESULT CALLBACK WMB_WINDOWPROC(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);
+LRESULT CALLBACK WMB_WindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);
 
 
 static BOOL MakeMainWindow(HINSTANCE inst, int nCmdShow)
@@ -39,7 +39,7 @@ static BOOL MakeMainWindow(HINSTANCE inst, int nCmdShow)
     wcex.cbSize = sizeof(WNDCLASSEX);
 
     wcex.style = CS_HREDRAW | CS_VREDRAW;
-    wcex.lpfnWndProc = WMB_WINDOWPROC;
+    wcex.lpfnWndProc = WMB_WindowProc;
     wcex.cbClsExtra = 0;
     wcex.cbWndExtra = 0;
     wcex.hInstance = inst;
