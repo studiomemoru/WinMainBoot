@@ -27,3 +27,5 @@
 #if WMB_USE_RESOURCES
 # include "../resources/resource.h"
 #endif
+
+extern HINSTANCE g_instance;

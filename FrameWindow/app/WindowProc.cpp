@@ -6,7 +6,7 @@
 
 #include "../winmain/WinMainBoot.hpp"
 
-extern HINSTANCE g_instance;
+// ------------------------------------------------------------------------
 
 LRESULT CALLBACK WMB_WindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {

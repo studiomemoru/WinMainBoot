@@ -26,6 +26,9 @@
 
 #pragma comment(lib, "comctl32.lib") 
 
+// ------------------------------------------------------------------------
+
+// Global variable.
 HINSTANCE g_instance;
 
 //-- in "app/WindowProc.cpp"
@@ -45,7 +48,7 @@ static BOOL MakeMainWindow(HINSTANCE inst, int nCmdShow)
     wcex.hInstance = inst;
     wcex.hIcon = LoadIcon(nullptr, IDI_APPLICATION);
     wcex.hCursor = LoadCursor(nullptr, IDC_ARROW);
-    wcex.hbrBackground = (HBRUSH)(GetStockObject(WHITE_BRUSH));
+    wcex.hbrBackground = reinterpret_cast<HBRUSH>(GetStockObject(WHITE_BRUSH));
     wcex.lpszMenuName = nullptr;
     wcex.lpszClassName = WMB_WINDOW_CLASSNAME;
     wcex.hIconSm = nullptr;
