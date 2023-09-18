@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="winmain">
+      <UniqueIdentifier>{3ba1c34d-13e9-4ab3-bf39-3da353c3fff1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="app">
+      <UniqueIdentifier>{63518964-64ea-453a-a121-89ae72c163d6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="winmain\winmain.cpp">
+      <Filter>winmain</Filter>
+    </ClCompile>
+    <ClCompile Include="app\WindowProc.cpp">
+      <Filter>app</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="winmain\WinMainBoot.hpp">
+      <Filter>winmain</Filter>
+    </ClInclude>
+    <ClInclude Include="app\configure.hpp">
+      <Filter>app</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
